@@ -1,4 +1,6 @@
-#Import socket module
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+
 from socket import *
 import sys 
 import os
@@ -47,7 +49,7 @@ class Timer (threading.Thread):
                 transfer_rate = mega_bits_amount_of_data/self.delay
                 
                 writer.writerow([datetime.datetime.now().isoformat(), transfer_rate])
-                print('Numero de clientes conectados %s\nTaxa de transferência: ' % str(number_of_connections +1) , transfer_rate, 'Mbits/s')
+                print('Numero de clientes conectados %s ; Taxa de transferencia: ' % str(number_of_connections +1) , transfer_rate, 'Mbits/s')
                 file.flush()
 
             file.close()
